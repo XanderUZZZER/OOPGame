@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Color.cs" />
     <Compile Include="Food.cs" />
     <Compile Include="GameEngine.cs" />
     <Compile Include="GameEngineSnake.cs" />

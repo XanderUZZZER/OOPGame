@@ -11,7 +11,7 @@ namespace OOPGame_Snake
             Console.WindowHeight = 25;    //Window height in rows
             Console.SetBufferSize(Console.WindowWidth, Console.WindowHeight);
             Console.Title = "Snake The Game";
-            Console.BackgroundColor = ConsoleColor.White;
+            Console.BackgroundColor = ConsoleColor.Gray;
             Console.CursorVisible = false;
             Console.Clear();
 

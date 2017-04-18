@@ -32,7 +32,7 @@ namespace OOPGame_Snake
                 tempObjects.Clear();
 
                 //Clearing screen before painting new frame
-                graphics.FillRectangle(0xFFFFFFFF, 0, 0, graphics.ClientWidth, graphics.ClientHeight);
+                graphics.FillRectangle((uint)Color.Green, 0, 0, graphics.ClientWidth, graphics.ClientHeight);
 
                 foreach (var obj in objects)
                     obj.Render(graphics);

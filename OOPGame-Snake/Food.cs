@@ -7,12 +7,10 @@ namespace OOPGame_Snake
     {
         public void Render(ConsoleGraphics graphics)
         {
-            throw new NotImplementedException();
         }
 
         public void Update(GameEngine engine)
         {
-            throw new NotImplementedException();
         }
     }
 }

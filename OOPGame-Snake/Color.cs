@@ -13,9 +13,11 @@ namespace OOPGame_Snake
         Blue = 0xFF0000FF,
 
         Green = 0xFF008000,
+        GreenDark = 0xFF637A6C,
+        GreenLight = 0xFF748A7D,
 
         Red = 0xFFFF0000,
-        DarkRed = 0xFF8B0000,
+        RedDark = 0xFF8B0000,
 
         Yellow = 0xFFFFFF00
     }

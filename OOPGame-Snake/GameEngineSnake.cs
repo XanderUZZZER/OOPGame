@@ -7,9 +7,7 @@ namespace OOPGame_Snake
         public GameEngineSnake(ConsoleGraphics graphics) 
                         : base(graphics)
         {
-            AddObject(new Walls());
-            AddObject(new Snake(graphics));
-            AddObject(new Food());
+            AddObject(new PlayingField(graphics));
         }
     }
 }

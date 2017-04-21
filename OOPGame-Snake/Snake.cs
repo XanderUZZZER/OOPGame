@@ -14,6 +14,7 @@ namespace OOPGame_Snake
         public List<Segment> body = new List<Segment>(3);
         int X = PlayingArea.PlayingWidth / 2 + 4;                           //Snake tail start position
         int Y = PlayingArea.PlayingHeight / 2 + 4 + Segment.CellSize * 2;   //
+        Color SnakeColor = Color.Black;
 
         public Direction Direction = Direction.Up;
         public Direction ProhibitedDirection = Direction.Down;
@@ -21,16 +22,16 @@ namespace OOPGame_Snake
         public Snake(ConsoleGraphics graphics)
         {
             this.graphics = graphics;
-            body.Add(new Segment(X, Y, graphics, Color.Black));
-            body.Add(new Segment(X, Y - Segment.CellSize, graphics, Color.Black));
-            body.Add(new Segment(X, Y - Segment.CellSize * 2, graphics, Color.Black));
+            body.Add(new Segment(X, Y, graphics, SnakeColor));
+            body.Add(new Segment(X, Y - Segment.CellSize, graphics, SnakeColor));
+            body.Add(new Segment(X, Y - Segment.CellSize * 2, graphics, SnakeColor));
         }
 
         void DarwSnake()
         {
-            for (int i = 0; i < body.Count; i++)
+            foreach (var segment in body)
             {
-                body[i].DrawSegment(body[i].X, body[i].Y, Color.Black);
+                segment.DrawSegment(segment.X, segment.Y, SnakeColor);
             }
         }
 

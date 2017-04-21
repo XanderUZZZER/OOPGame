@@ -51,9 +51,11 @@
     <Compile Include="GameEngine.cs" />
     <Compile Include="GameEngineSnake.cs" />
     <Compile Include="IGameObject.cs" />
+    <Compile Include="PlayingArea.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Field.cs" />
+    <Compile Include="Segment.cs" />
+    <Compile Include="Snake.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

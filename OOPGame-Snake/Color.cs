@@ -14,8 +14,9 @@ namespace OOPGame_Snake
         Red = 0xFFFF0000,
         RedDark = 0xFF8B0000,
         Yellow = 0xFFFFFF00,
+        White = 0xFFFFFFFF,
 
-        ForegoundColor = 0xFFAEBCAD, //ForegoundColor disabled (GreenDark)
+        ForegroundColor = 0xFFAEBCAD, //ForegoundColor disabled (GreenDark)
         BackgroundColor = 0xFFB7C5B6 //BackgroundColor (GreenLight)
     }
 }

@@ -40,7 +40,7 @@ namespace OOPGame_Snake
                 //double buffering technique is used
                 graphics.FlipPages();
 
-                Thread.Sleep(50);
+                Thread.Sleep(100);
             }
         }
     }

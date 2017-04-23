@@ -8,8 +8,10 @@ namespace OOPGame_Snake
                         : base(graphics)
         {
             
-            AddObject(new PlayingArea(graphics));
-            AddObject(new Snake(graphics));
+            AddObject(new PlayingArea());
+            AddObject(new StatArea(graphics));
+            //AddObject(new Snake());
+            //AddObject(new Food());
         }
     }
 }

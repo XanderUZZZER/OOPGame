@@ -7,8 +7,8 @@ namespace OOPGame_Snake
     {
         static void Main(string[] args)
         {
-            Console.WindowWidth = 65;     //Window width in columns
-            Console.WindowHeight = 45;    //Window height in rows
+            Console.WindowWidth = 70;     //Window width in columns
+            Console.WindowHeight = 48;    //Window height in rows
             Console.SetBufferSize(Console.WindowWidth, Console.WindowHeight);
             Console.Title = "Snake The Game";
             Console.BackgroundColor = ConsoleColor.Gray;

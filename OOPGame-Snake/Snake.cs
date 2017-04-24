@@ -47,7 +47,7 @@ namespace OOPGame_Snake
             {
                 case Direction.Up:
                     {
-                        if (body.First().Y - 4 != 0)
+                        if (body.First().Y != PlayingArea.Y)//if (body.First().Y - 4 != 0)
                         {
                             body.Insert(0, new Segment(body.First().X, body.First().Y - Segment.CellSize, SnakeColor));
                         }
@@ -86,7 +86,7 @@ namespace OOPGame_Snake
                     }
                 case Direction.Left:
                     {
-                        if (body.First().X - 4 != 0)
+                        if (body.First().X != PlayingArea.X)//if (body.First().X - 4 != 0)
                         {
                             body.Insert(0, new Segment(body.First().X - Segment.CellSize, body.First().Y, SnakeColor));
                         }

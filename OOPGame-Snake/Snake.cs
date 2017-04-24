@@ -19,6 +19,8 @@ namespace OOPGame_Snake
         public Direction Direction = Direction.Up;
         public Direction ProhibitedDirection = Direction.Down;
 
+        private bool canMove = false;
+
         public Snake()
         {
             AddSegemnt(X, Y);
@@ -35,6 +37,21 @@ namespace OOPGame_Snake
         {
             foreach (var segment in body)
             {
+                segment.Render(graphics);
+            }
+        }
+
+        void SnakeBlink(ConsoleGraphics graphics)
+        {
+            foreach(var segment in body)
+            {
+                segment.SegmentColor = Color.White;
+                segment.Render(graphics);
+            }
+            Thread.Sleep(25);
+            foreach (var segment in body)
+            {
+                segment.SegmentColor = Color.Black;
                 segment.Render(graphics);
             }
         }
@@ -73,7 +90,7 @@ namespace OOPGame_Snake
                     {
                         if (body.First().Y - 4 + Segment.CellSize != PlayingArea.PlayingHeight)
                         {
-                            body.Insert(0, new Segment(body.First().X, body.First().Y + Segment.CellSize, SnakeColor));
+                            ; body.Insert(0, new Segment(body.First().X, body.First().Y + Segment.CellSize, SnakeColor));
                         }
                         else
                         {
@@ -117,7 +134,7 @@ namespace OOPGame_Snake
                         }
                     }
                 } while (addNext);
-                SegmentsEated++;
+                SegmentsEated++;                              
             }
         }
 
@@ -139,19 +156,17 @@ namespace OOPGame_Snake
         public void Render(ConsoleGraphics graphics)
         {
             DarwSnake(graphics);
-        }
-
-        private bool move = false;
+        }              
 
         public void Update(GameEngine engine)
         {
-            if (move)
+            if (canMove)
             {
                 Move();
             }
             if (Input.IsKeyDown(Keys.UP) && (ProhibitedDirection != Direction.Up))
             {
-                move = true;
+                canMove = true;
                 Direction = Direction.Up;
                 ProhibitedDirection = Direction.Down;
             }
@@ -172,7 +187,7 @@ namespace OOPGame_Snake
             }
             if (Input.IsKeyDown(Keys.ESCAPE))
             {
-                move = false;
+                canMove = false;
             }
         }
     }

@@ -41,12 +41,13 @@ namespace OOPGame_Snake
             TotalHeight = PlayingHeight + BorderThickness*2;
             X = (TotalWidth - PlayingWidth) / 2;
             Y = (TotalHeight - PlayingHeight) / 2;
+            segment = new Segment(X, Y, CellsColor);
+
             StartNewGame();
         }
 
         public void StartNewGame()
-        {
-            segment = new Segment(X, Y, CellsColor);
+        {            
             snake = new Snake();
             food = new Food();
         }

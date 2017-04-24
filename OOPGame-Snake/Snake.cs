@@ -41,21 +41,6 @@ namespace OOPGame_Snake
             }
         }
 
-        void SnakeBlink(ConsoleGraphics graphics)
-        {
-            foreach(var segment in body)
-            {
-                segment.SegmentColor = Color.White;
-                segment.Render(graphics);
-            }
-            Thread.Sleep(25);
-            foreach (var segment in body)
-            {
-                segment.SegmentColor = Color.Black;
-                segment.Render(graphics);
-            }
-        }
-
         void Move()
         {
             switch (Direction)
@@ -134,7 +119,7 @@ namespace OOPGame_Snake
                         }
                     }
                 } while (addNext);
-                SegmentsEated++;                              
+                SegmentsEated++;                                    
             }
         }
 
